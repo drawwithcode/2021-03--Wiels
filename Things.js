@@ -1,16 +1,18 @@
 
 class Teksten{
   constructor(movies){
-    this.rwsize = random(width/8,width/5)
-    this.rhsize = random(height/7,height/4)
+    this.rwsize = random(width/8,width/3)
+    this.rhsize = random(height/7,height/3)
     this.x = random(width)
     this.y=random(height)
     this.z=random(height/2)
     let tekst = createGraphics(this.rwsize,this.rhsize)
     tekst.fill(color(random(255),random(255),random(255),random(255)))
     tekst.textAlign(CENTER)
-    tekst.textSize(random(10,50))
-    let size = 500
+    tekst.noStroke()
+    tekst.textFont("Roboto Mono")
+    tekst.textSize(random(5,25))
+    let size = 1500
     let movie_number = round(random(size-1))
     let movie = movies[movie_number]
     let titel = movie.title

@@ -23,7 +23,7 @@ let skins
 let am_skins
 let things=[]
 let teksten=[]
-let n = 15
+let n
 let bool = 0
 let movies
 let titles
@@ -32,7 +32,9 @@ let counter=0
 function preload(){
   duifje = loadImage("./assets/duifjewow.jpg")
   kdb = loadImage("./assets/kerkdakbloem1.2.jpg")
-  mySong = loadSound("./assets/SW_icarus_short.mp3")
+
+  mySong = loadSound("./assets/Finally.space.mp3")
+
   bg = loadImage("./assets/betongoeie.jpg")
   hh = loadImage("./assets/hockneyhupla.jpg")
   kdb2 = loadImage("./assets/kerkdakbloem1.11.jpg")
@@ -54,7 +56,7 @@ function preload(){
 }
 
 function setup(){
-
+  n = random(10,25)
   createCanvas(windowWidth,windowHeight,WEBGL)
   analyzer = new p5.Amplitude()
   analyzer.setInput(mySong)
